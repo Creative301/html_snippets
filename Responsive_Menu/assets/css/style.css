@@ -1,0 +1,136 @@
+body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.container  {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* Logo */
+.logo {
+    position: absolute;
+    z-index: 9;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Hamburger Menu */
+a.mobile_menu {
+    display: none;
+}
+
+/* Menu */
+.nav {
+    margin: 0 auto;
+    position: relative;
+    background-color: rgba(0,0,0,.50);
+    height: 50px; /* Buat kasih background-bar */    
+}
+
+nav { /* geser ul ke kanan atas */
+    position: absolute;
+    max-width: 1000px;
+    top: 0;
+    right: 20px;
+}
+
+header::after, nav ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav ul li { /* Buat menu jd horizontal */
+    float: left;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 20px 20px 15px 20px; /* Buat jarak horizontal & vertical */
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #333;
+    /* background-color: #fff; */
+    border-bottom: 2px solid #000;
+}
+/*End Menu*/
+
+@media screen and (max-width: 767px) {
+    /* Lokasi nav*/
+    nav {
+        position: absolute;
+        width: 100%;
+        top: 50px; /* dibawah background bar */
+        right: 0;
+        left: 0;
+        height: 0; /* untuk hide menu */
+        overflow: hidden;
+        background-color: rgba(0,0,0,.50);
+    }
+   
+    nav ul li {
+        float: none; /* Buat menu jd vertical */
+    }
+
+    nav ul li a {
+        font-size: 0.8em;
+        display: block; /* Buat background jadi full width 100% */
+        margin: 0; /* Buat kasih jarak atas bawah kiri kanan*/
+        padding: 12px 0 12px 30px;
+    }
+
+    nav a:hover {
+        color: black;
+        background-color: #fff;
+    }
+
+    a.mobile_menu {
+        display: block; 
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        z-index: 10;
+        color: #fff;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
